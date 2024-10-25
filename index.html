@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Transcript Fetcher</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>YouTube Transcript Fetcher</h1>
+        
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                <ul class="flashes">
+                    {% for category, message in messages %}
+                        <li class="{{ category }}">{{ message }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        {% endwith %}
+        
+        <form method="POST">
+            <label for="youtube_url">YouTube Video URL:</label>
+            <input type="text" id="youtube_url" name="youtube_url" required>
+            <button type="submit">Fetch Transcript</button>
+        </form>
+
+        {% if transcript %}
+            <h2>Transcript</h2>
+            <pre>{{ transcript }}</pre>
+            <a href="/download/{{ video_id }}">Download Transcript</a>
+        {% endif %}
+    </div>
+</body>
+</html>
