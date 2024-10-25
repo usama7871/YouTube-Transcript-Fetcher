@@ -1,7 +1,3 @@
-### README for **YouTube Transcript Fetcher**
-
----
-
 ## Project Overview
 
 **YouTube Transcript Fetcher** is a Flask-based web application that allows users to extract and download the transcript of any YouTube video. The application uses the `youtube-transcript-api` Python library to fetch transcripts and provides functionality for both manual and auto-generated transcripts in various languages.
