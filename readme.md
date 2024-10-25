@@ -56,8 +56,8 @@ pip install -r requirements.txt
    First, clone this repository to your local machine:
 
    ```bash
-   git clone https://github.com/your-repo-url/youtube-transcript-fetcher.git
-   cd youtube-transcript-fetcher
+   git clone https://github.com/usama7871/YouTube-Transcript-Fetcher.git
+   cd Youtube-Transcript-Fetcher
    ```
 
 2. **Create a Virtual Environment** *(Optional but recommended)*
